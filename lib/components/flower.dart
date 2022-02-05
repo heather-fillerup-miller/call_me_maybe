@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'die.dart';
+import '../models/die.dart';
 
 class Flower extends StatefulWidget {
   const Flower({Key? key}) : super(key: key);

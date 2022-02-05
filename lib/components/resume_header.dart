@@ -9,35 +9,37 @@ class ResumeHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final nameHeader = Theme.of(context).textTheme.headline4;
-    final subtitleHeader = Theme.of(context).textTheme.headline6;
+    final subtitleHeader = Theme.of(context).textTheme.subtitle1;
 
-    return Column(
-      children: [
-        Row(children: [
-          Text(
-            resume.getName,
-            style: nameHeader,
-          ),
-        ]),
-        Column(
-          children: [
-            Row(children: [
-              Text(
-                resume.getEmail,
-                style: subtitleHeader,
-              ),
-            ]),
-            Row(
-              children: [
+    return Expanded(
+      child: Column(
+        children: [
+          Row(children: [
+            Text(
+              resume.getName,
+              style: nameHeader,
+            ),
+          ]),
+          Column(
+            children: [
+              Row(children: [
                 Text(
-                  resume.getShortUrl,
+                  resume.getEmail,
                   style: subtitleHeader,
                 ),
-              ],
-            )
-          ],
-        )
-      ],
+              ]),
+              Row(
+                children: [
+                  Text(
+                    resume.getShortUrl,
+                    style: subtitleHeader,
+                  ),
+                ],
+              )
+            ],
+          )
+        ],
+      ),
     );
   }
 }

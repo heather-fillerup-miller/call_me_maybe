@@ -1,4 +1,3 @@
-import 'package:call_me_maybe/models/contact_info.dart';
 import './contact_info.dart';
 import './prior_position.dart';
 

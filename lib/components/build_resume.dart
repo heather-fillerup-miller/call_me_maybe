@@ -34,36 +34,51 @@ class _BuildResumeState extends State<BuildResume> {
 // create a Job Position for each job in resume
 List<Widget> jobPositions(ResumeDetails resume, BuildContext context) {
   final jobs = <Widget>[];
-  final titleHeader = Theme.of(context).textTheme.headline6;
+  final titleText = Theme.of(context).textTheme.subtitle1;
+  final jobline1Text = Theme.of(context).textTheme.subtitle2;
+  final jobline2Text = Theme.of(context).textTheme.bodyText1;
   double horizontalPadding(BuildContext context) =>
-      MediaQuery.of(context).size.width * 0.01;
+      MediaQuery.of(context).size.width * 0.03;
   double verticalPadding(BuildContext context) =>
-      MediaQuery.of(context).size.height * 0.01;
+      MediaQuery.of(context).size.height * 0.02;
 
   if (resume.positions.isNotEmpty) {
     for (var jobPosition in resume.positions) {
       jobs.add(Padding(
-        padding: EdgeInsets.symmetric(
-            horizontal: horizontalPadding(context),
-            vertical: verticalPadding(context)),
+        padding: EdgeInsets.only(top: verticalPadding(context)),
         child: Column(
           children: [
-            Row(children: [
-              Text(
-                jobPosition.jobTitle,
-                style: titleHeader,
-              )
-            ]),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Text(jobPosition.company),
-                Text(jobPosition.employmentDates),
-                Text(jobPosition.location)
-              ],
+            Padding(
+              padding: EdgeInsets.only(top: horizontalPadding(context)),
+              child: Row(children: [
+                Text(
+                  jobPosition.jobTitle,
+                  style: titleText,
+                )
+              ]),
             ),
             Row(
-              children: [Text(jobPosition.description)],
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(jobPosition.company, style: jobline1Text),
+                Text(jobPosition.employmentDates, style: jobline1Text),
+                Text(jobPosition.location, style: jobline1Text)
+              ],
+            ),
+            Padding(
+              padding: EdgeInsets.symmetric(
+                  horizontal: horizontalPadding(context),
+                  vertical: verticalPadding(context)),
+              child: Row(
+                children: <Widget>[
+                  Flexible(
+                      child: Text(
+                    jobPosition.description,
+                    textAlign: TextAlign.justify,
+                    style: jobline2Text,
+                  ))
+                ],
+              ),
             ),
           ],
         ),

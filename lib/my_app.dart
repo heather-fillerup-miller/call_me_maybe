@@ -18,7 +18,10 @@ class MyApp extends StatelessWidget {
                 headline4: TextStyle(color: Colors.white),
                 headline5: TextStyle(color: Colors.white70),
                 headline6: TextStyle(color: Colors.white70),
-                bodyText2: TextStyle(color: Colors.white)),
+                bodyText1: TextStyle(color: Colors.white70),
+                bodyText2: TextStyle(color: Colors.white),
+                subtitle1: TextStyle(color: Colors.white),
+                subtitle2: TextStyle(color: Colors.white)),
             scaffoldBackgroundColor: Colors.grey,
             backgroundColor: Colors.grey),
         home: MainTabController(resume: resume));

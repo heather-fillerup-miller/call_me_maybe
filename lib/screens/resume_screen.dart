@@ -10,9 +10,9 @@ class ResumeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double horizontalPadding(BuildContext context) =>
-        MediaQuery.of(context).size.width * 0.05;
+        MediaQuery.of(context).size.width * 0.04;
     double verticalPadding(BuildContext context) =>
-        MediaQuery.of(context).size.height * 0.05;
+        MediaQuery.of(context).size.height * 0.04;
 
     return LayoutBuilder(
         builder: (BuildContext context, BoxConstraints constraints) {
