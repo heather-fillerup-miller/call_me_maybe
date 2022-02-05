@@ -14,16 +14,12 @@ class ResumeScreen extends StatelessWidget {
     double verticalPadding(BuildContext context) =>
         MediaQuery.of(context).size.height * 0.05;
 
-    final nameHeader = Theme.of(context).textTheme.headline4;
-    final urlEmailHeader = Theme.of(context).textTheme.bodyText2;
-
     return LayoutBuilder(
-        builder: (BuildContext context, BoxConstraints viewportConstraints) {
+        builder: (BuildContext context, BoxConstraints constraints) {
       return SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         child: ConstrainedBox(
-          constraints: BoxConstraints(
-            maxWidth: viewportConstraints.maxWidth,
-          ),
+          constraints: BoxConstraints(maxWidth: constraints.maxWidth),
           child: Padding(
               padding: EdgeInsets.symmetric(
                 horizontal: horizontalPadding(context),

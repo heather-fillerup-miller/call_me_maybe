@@ -9,7 +9,7 @@ class ResumeHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final nameHeader = Theme.of(context).textTheme.headline4;
-    final urlEmailHeader = Theme.of(context).textTheme.bodyText2;
+    final subtitleHeader = Theme.of(context).textTheme.headline6;
 
     return Column(
       children: [
@@ -24,12 +24,14 @@ class ResumeHeader extends StatelessWidget {
             Row(children: [
               Text(
                 resume.getEmail,
+                style: subtitleHeader,
               ),
             ]),
             Row(
               children: [
                 Text(
                   resume.getShortUrl,
+                  style: subtitleHeader,
                 ),
               ],
             )

@@ -36,6 +36,12 @@ void main() {
             company: 'Hawaii Pacific Health',
             employmentDates: '2018-current',
             location: 'Honolulu, HI',
+            description: 'Information Systems management'),
+        PriorPosition(
+            jobTitle: 'IT Information Systems Specialist',
+            company: 'Hawaii Pacific Health',
+            employmentDates: '2018-current',
+            location: 'Honolulu, HI',
             description: 'Information Systems management')
       ])));
 }
