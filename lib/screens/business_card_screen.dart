@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
+import '../components/contact_links.dart';
 import '../models/contact_info.dart';
 
 class BusinessCardScreen extends StatefulWidget {
@@ -16,8 +16,6 @@ class _BusinessCardScreenState extends State<BusinessCardScreen> {
   Widget build(BuildContext context) {
     final nameHeader = Theme.of(context).textTheme.headline4;
     final titleHeader = Theme.of(context).textTheme.headline5;
-    final urlEmailHeader = Theme.of(context).textTheme.bodyText2;
-    final phoneHeader = Theme.of(context).textTheme.headline6;
 
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -36,34 +34,9 @@ class _BusinessCardScreenState extends State<BusinessCardScreen> {
           widget.contact.title,
           style: titleHeader,
         ),
-        Container(
-          padding: EdgeInsets.all(padding(context)),
-          color: Theme.of(context).backgroundColor,
-          child: GestureDetector(
-              onTap: () => launch('sms: ${widget.contact.phoneNo}'),
-              child: Text(widget.contact.phoneNo, style: phoneHeader)),
-        ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: <Widget>[
-            Container(
-              padding: EdgeInsets.all(padding(context)),
-              child: GestureDetector(
-                onTap: () => _launchURL(),
-                child: Text(widget.contact.shortUrl, style: urlEmailHeader),
-              ),
-            ),
-            Text(widget.contact.email, style: urlEmailHeader)
-          ],
-        )
+        ContactLinks(contact: widget.contact),
       ],
     );
-  }
-
-  // code from: https://pub.dev/packages/url_launcher
-  void _launchURL() async {
-    final _url = widget.contact.webUrl + widget.contact.shortUrl;
-    if (!await launch(_url)) throw 'Could not launch $_url';
   }
 
   double padding(BuildContext context) {

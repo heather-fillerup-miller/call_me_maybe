@@ -18,8 +18,8 @@ void main() {
       resume: ResumeDetails(
           contact: ContactInfo(
               name: 'Heather Fillerup',
-              email: 'Heather.Miller@ibm.com',
-              phoneNo: '978.616.9837',
+              email: 'Heather.Fillerup@business.com',
+              phoneNo: '555.555.5555',
               shortUrl: 'in/heather-fillerup-miller',
               webUrl: 'https://www.linkedin.com/',
               imageFile: 'assets/images/heather.jpg',

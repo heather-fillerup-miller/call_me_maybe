@@ -32,7 +32,7 @@ class MainTabController extends StatelessWidget {
             body: TabBarView(children: [
               BusinessCardScreen(contact: resume.getContact),
               ResumeScreen(resume: resume),
-              const Predictor()
+              const PredictorScreen()
             ])));
   }
 }

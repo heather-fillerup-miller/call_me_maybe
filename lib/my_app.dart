@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.teal,
             fontFamily: 'Roboto Condensed',
             textTheme: const TextTheme(
+                headline3: TextStyle(color: Colors.white),
                 headline4: TextStyle(color: Colors.white),
                 headline5: TextStyle(color: Colors.white70),
                 headline6: TextStyle(color: Colors.white70),
