@@ -15,7 +15,6 @@ class ContactLinks extends StatelessWidget {
     return Column(children: [
       Container(
         padding: EdgeInsets.all(padding(context)),
-        color: Theme.of(context).backgroundColor,
         child: GestureDetector(
             onTap: () => launch('sms: ${contact.phoneNo}'),
             child: Text(contact.phoneNo, style: phoneHeader)),

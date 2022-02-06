@@ -3,8 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:call_me_maybe/models/prior_position.dart';
 import 'my_app.dart';
 import 'models/resume_details.dart';
-import './models/contact_info.dart';
-import './models/prior_position.dart';
+import 'models/contact_info.dart';
+import 'models/prior_position.dart';
 
 void main() {
   SystemChrome.setPreferredOrientations([

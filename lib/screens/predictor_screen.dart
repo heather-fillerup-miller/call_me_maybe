@@ -39,9 +39,7 @@ class _PredictorScreenState extends State<PredictorScreen> {
                 vertical: verticalPadding(context)),
             child: GestureDetector(
               onTap: () {
-                setState(() {
-                  randomPrompts.roll();
-                });
+                setState(() => randomPrompts.roll());
               },
               child: Text(
                 'Ask a question ... then tap me for your answer:',

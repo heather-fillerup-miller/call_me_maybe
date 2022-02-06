@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         theme: ThemeData(
             primarySwatch: Colors.teal,
-            fontFamily: 'Roboto Condensed',
+            fontFamily: 'Roboto Condensed', // custom font
             textTheme: const TextTheme(
                 headline3: TextStyle(color: Colors.white),
                 headline4: TextStyle(color: Colors.white),
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
                 bodyText2: TextStyle(color: Colors.white),
                 subtitle1: TextStyle(color: Colors.white),
                 subtitle2: TextStyle(color: Colors.white)),
-            scaffoldBackgroundColor: Colors.grey,
+            scaffoldBackgroundColor: Colors.grey.shade600,
             backgroundColor: Colors.grey),
         home: MainTabController(resume: resume));
   }

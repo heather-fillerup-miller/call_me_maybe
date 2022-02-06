@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../models/resume_details.dart';
 import './resume_header.dart';
+import '../models/resume_details.dart';
 
 class BuildResume extends StatefulWidget {
   final ResumeDetails resume;
